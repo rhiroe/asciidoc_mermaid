@@ -1,3 +1,7 @@
+https://rhiroe.github.io/asciidoc_mermaid
+
+### ローカルで`.adoc`からhtmlを生成するには
+
 ```shell
 $ bundle install
 $ yarn install
