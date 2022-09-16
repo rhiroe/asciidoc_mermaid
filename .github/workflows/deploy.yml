@@ -31,6 +31,13 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
 
+      - name: Install font
+        run: |
+          wget -O nsj.zip https://fonts.google.com/download?family=Noto%20Sans%20JP
+          unzip -d noto_sans_jp/ nsj.zip
+          mv noto_sans_jp /usr/share/fonts/
+          fc-cache -fv
+
       - name: export
         run: asciidoctor -o out/index.html -b html5 -r asciidoctor-diagram docs/sample.adoc
 
