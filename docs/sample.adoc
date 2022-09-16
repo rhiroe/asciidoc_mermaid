@@ -1,0 +1,38 @@
+:imagesdir: ./images
+:mmdc: ./node_modules/.bin/mmdc
+
+= サンプル設計書
+サンプル太郎 <sample@example.com>
+v1.0, 2016-03-15
+:toc:
+
+== mermaid
+
+mermaid も直接書ける
+
+.mermaidの例
+
+[mermaid]
+----
+graph LR;
+    AsciiDocテキスト -- asciidocotor-pdf --> PDF仕様書;
+    PlantUMLテキスト -- PlantUML --> png画像;
+    png画像 -- asciidoctor-pdf --> PDF仕様書;
+----
+
+シーケンス図
+
+[mermaid]
+....
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>John: Hello John, how are you?
+    loop Healthcheck
+        John->>John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br/>prevail!
+    John-->>Alice: Great!
+    John->>Bob: How about you?
+    Bob-->>John: Jolly good!
+....
