@@ -1,10 +1,23 @@
 :imagesdir: ./images
 :mmdc: ./node_modules/.bin/mmdc
+:source-highlighter: coderay
+:coderay-linenums-mode: inline
 
 = サンプル設計書
 サンプル太郎 <sample@example.com>
 v1.0, 2016-03-15
 :toc:
+
+== code
+
+[source%linenums, ruby]
+----
+class Foo
+  def bar(arg)
+    puts arg
+  end
+end
+----
 
 == mermaid
 
