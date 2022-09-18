@@ -449,77 +449,177 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
+<li><a href="#_code">code</a></li>
 <li><a href="#_mermaid">mermaid</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
+<h2 id="_code">code</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-ruby" data-lang="ruby">class Foo
+  def bar(arg)
+    puts arg
+  end
+end</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_mermaid">mermaid</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>mermaid も直接書ける</p>
 </div>
-<div class="imageblock">
+<div class="listingblock">
+<div class="title">mermaidの例</div>
 <div class="content">
-<img src="./images/diag-12df20a125ca961f6991ce59ac2e5659.png" alt="Diagram" width="700" height="154">
+<pre>Failed to generate image: Could not find the 'mmdc' executable in PATH; add it to the PATH or specify its location using the 'mmdc' document attribute
+graph LR;
+    AsciiDocテキスト -- asciidocotor-pdf --&gt; PDF仕様書;
+    PlantUMLテキスト -- PlantUML --&gt; png画像;
+    png画像 -- asciidoctor-pdf --&gt; PDF仕様書;</pre>
 </div>
-<div class="title">Figure 1. mermaidの例</div>
 </div>
 <div class="paragraph">
 <p>シーケンス図</p>
 </div>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="./images/diag-830f128ffcb3688e1b9353474e967ec6.png" alt="Diagram" width="750" height="576">
+<pre>Failed to generate image: no implicit conversion of nil into String
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice-&gt;&gt;John: Hello John, how are you?
+    loop Healthcheck
+        John-&gt;&gt;John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts &lt;br/&gt;prevail!
+    John--&gt;&gt;Alice: Great!
+    John-&gt;&gt;Bob: How about you?
+    Bob--&gt;&gt;John: Jolly good!</pre>
 </div>
 </div>
 <div class="paragraph">
 <p>以下牛房さんのサンプルから借用</p>
 </div>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="./images/diag-13676221e2c9d6fd3ae951b78ea9acbf.png" alt="Diagram" width="129" height="230">
+<pre>Failed to generate image: no implicit conversion of nil into String
+graph TD;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;</pre>
 </div>
 </div>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="./images/diag-68c5bac27062c158d12499c4830319bb.png" alt="Diagram" width="784" height="570">
+<pre>Failed to generate image: no implicit conversion of nil into String
+sequenceDiagram
+    participant 太郎
+    participant 花子
+    太郎-&gt;&gt;花子: こんにちは、花子さん。元気ですか？
+    loop Healthcheck
+        花子-&gt;&gt;花子: Fight against hypochondria
+    end
+    Note right of 花子: Rational thoughts &lt;br/&gt;prevail!
+    花子--&gt;&gt;太郎: 良いですよ！
+    花子-&gt;&gt;次郎: あなたはどうですか？
+    次郎--&gt;&gt;花子: とても良いです</pre>
 </div>
 </div>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="./images/diag-fd99e8b88ff992e2af414f1ad366ec6f.png" alt="Diagram" width="784" height="196">
+<pre>Failed to generate image: no implicit conversion of nil into String
+gantt
+dateFormat  YYYY-MM-DD
+title ガントチャートのサンプル
+excludes weekdays 2014-01-10
+section A section
+完了したタスク            :done,    des1, 2022-07-06,2022-07-08
+アクティブなタスク        :active,  des2, 2022-07-09, 3d
+未来のタスク              :         des3, after des2, 5d
+別な未来のタスク          :         des4, after des3, 5d</pre>
 </div>
 </div>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="./images/diag-1acadd4d70ba7f2f772deca2a8c66936.png" alt="Diagram" width="476" height="174">
+<pre>Failed to generate image: no implicit conversion of nil into String
+gitGraph
+    commit
+    commit
+    branch develop
+    commit
+    commit
+    commit
+    checkout main
+    commit
+    commit</pre>
 </div>
 </div>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="./images/diag-ccc0cac06b49f336cc13d15f1e3869c3.png" alt="Diagram" width="391" height="465">
+<pre>Failed to generate image: no implicit conversion of nil into String
+erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE-ITEM : contains
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses</pre>
 </div>
 </div>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="./images/diag-cddd9e224bbc8558152378b8858ebc68.png" alt="Diagram" width="784" height="565">
+<pre>Failed to generate image: no implicit conversion of nil into String
+journey
+    title My working day
+    section Go to work
+      Make tea: 5: Me
+      Go upstairs: 3: Me
+      Do work: 1: Me, Cat
+    section Go home
+      Go downstairs: 5: Me
+      Sit down: 5: Me</pre>
 </div>
 </div>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="./images/diag-cd41bb6b5e75ce2484ab36519b086cf7.png" alt="Diagram" width="303" height="297">
+<pre>Failed to generate image: no implicit conversion of nil into String
+stateDiagram
+    [*] --&gt; IsPositive
+    IsPositive --&gt; if_state
+    if_state --&gt; False: if n &lt; 0
+    if_state --&gt; True : if n &gt;= 0</pre>
 </div>
 </div>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="./images/diag-292c34119aa09189b95ac0716063cbe5.png" alt="Diagram" width="784" height="450">
+<pre>Failed to generate image: no implicit conversion of nil into String
+pie showData
+    title Key elements in Product X
+    "Calcium" : 42.96
+    "Potassium" : 50.05
+    "Magnesium" : 10.01
+    "Iron" :  5</pre>
 </div>
 </div>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="./images/diag-2af96b734e792bf644a05ba94ebd8b94.png" alt="Diagram" width="220" height="520">
+<pre>Failed to generate image: no implicit conversion of nil into String
+requirementDiagram
+    requirement test_req {
+    id: 1
+    text: the test text.
+    risk: high
+    verifymethod: test
+    }
+    element test_entity {
+    type: simulation
+    }
+    test_entity - satisfies -&gt; test_req</pre>
 </div>
 </div>
 </div>
@@ -528,7 +628,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2022-09-16 09:09:19 UTC
+Last updated 2022-09-18 11:58:14 UTC
 </div>
 </div>
 </body>
